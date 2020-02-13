@@ -11,6 +11,11 @@ RUN apt-get update && \
 		rm -rf /var/lib/apt/lists/* && \
 		curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
+
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
+
+RUN rm -rf /var/www/html && ln -s /app /var/www/html
+
 ADD run.sh /run.sh
 RUN chmod 755 /run.sh
 
