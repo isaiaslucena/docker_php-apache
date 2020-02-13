@@ -5,5 +5,5 @@ if [[ -f "/FIRST_RUN" ]] ; then
 	composer install
 fi
 
-service apache2 restart
-tail -f /var/log/apache2/error.log
+source /etc/apache2/envvars
+exec apache2 -D FOREGROUND
