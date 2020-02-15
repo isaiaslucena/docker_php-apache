@@ -6,6 +6,7 @@ if [[ -f "/FIRST_RUN" ]] ; then
 	echo "" >> /etc/apache2/apache2.conf.
 	echo "XSendFile on" >> /etc/apache2/apache2.conf
 	echo "XSendFilePath /disks" >> /etc/apache2/apache2.conf
+	echo "XSendFilePath /tv" >> /etc/apache2/apache2.conf
 	a2enmod rewrite
 	composer install
 fi
