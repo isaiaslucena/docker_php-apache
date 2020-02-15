@@ -1,1 +1,1 @@
-# docker_php-apache
+# docker_php-apache with xsendfile module
